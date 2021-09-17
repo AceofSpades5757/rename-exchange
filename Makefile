@@ -22,7 +22,7 @@ env: venv/bin/activate
 define HELP
 Manage $(PROJECTNAME). Usage:
 
-make run        - Run $(PROJECTNAME).
+make build      - Build distributions.
 make test       - Test using tox.
 make clean      - Clean temporary files and caches.
 endef
@@ -38,6 +38,10 @@ all help:
 test:
 	tox
 
+build:
+	./make-manylinux-wheel.sh
+
 clean:
 	find . -name '*.pyc'       -delete
 	find . -name '__pycache__' -delete
+	rm dist/*
