@@ -24,6 +24,7 @@ Manage $(PROJECTNAME). Usage:
 
 make run        - Run $(PROJECTNAME).
 make test       - Test using tox.
+make clean      - Clean temporary files and caches.
 endef
 export HELP
 
