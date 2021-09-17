@@ -6,6 +6,13 @@
 
 Solving this puzzle.
 
+# Goals
+
+* Python Packaging Metadata (`setup.py`/`setup.cfg`/`pyproject.toml`)
+* Implement Python C Extension Module
+* Script to Produce `abi3` manylinux wheel
+* (Optional) Testsuite to Validate Package (`tox.ini`/`pytest`)
+
 # Issues
 
 Had issues with importing. Went through [Python C Extension Tutorial](https://www.youtube.com/watch?v=HrEzCI3jIHw) to figure out what was missing.
@@ -17,3 +24,7 @@ PyMODINIT_FUNC PyInit_rename_exchange(void) {
     return PyModule_Create(&module);
 }
 ```
+
+# Credit
+
+[Anthony Sottile](https://github.com/asottile) as the creator of the content used in this interesting project.
